@@ -11,17 +11,6 @@
 
 <link rel="icon" href="images/favicon.png" type="image/png">
 
-<meta property="og:title" content="UK Garage & Bassline Beats | UKG.YombolMusic.com – Premium Instrumentals">
-<meta property="og:description" content="Buy exclusive UK Garage and Bassline beats. Prices from $5, instant delivery. Take your music to the next level!">
-<meta property="og:image" content="https://UKG.YombolMusic.com/images/Banner-(UKG).jpg">
-<meta property="og:url" content="https://UKG.YombolMusic.com">
-<meta property="og:type" content="website">
-
-<meta name="twitter:card" content="summary_large_image">
-<meta name="twitter:title" content="UK Garage & Bassline Beats | UKG.YombolMusic.com – Premium Instrumentals">
-<meta name="twitter:description" content="Buy exclusive UK Garage and Bassline beats. Prices from $5, instant delivery. Take your music to the next level!">
-<meta name="twitter:image" content="https://UKG.YombolMusic.com/images/Banner-(UKG).jpg">
-
 <script>
 !function(f,b,e,v,n,t,s)
 {if(f.fbq)n=f.fbq=function(){n.callMethod?
@@ -34,17 +23,16 @@ s.parentNode.insertBefore(t,s)}(window, document,'script',
 fbq('init', '1408373406987633');
 fbq('track', 'PageView');
 </script>
-<noscript><img height="1" width="1" style="display:none"
-src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
-/></noscript>
+
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
 <style>
     :root {
-        --bg-dark: #101010;
+        --bg-dark: #080808;
         --neon-blue: #00FFFF;
         --neon-purple: #9400D3;
+        --deep-blue: #002244;
         --text-light: #ffffff;
     }
 
@@ -58,17 +46,33 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
         line-height: 1.6;
     }
 
+    /* --- FONDO ANIMADO CON FIGURAS NEON --- */
     .bg-wrapper {
         position: fixed;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 100%;
+        top: 0; left: 0; width: 100%; height: 100%;
         z-index: -1;
-        background: radial-gradient(circle at 50% 50%, #151515 0%, #000000 100%);
+        background: radial-gradient(circle at 50% 50%, #0a0a0a 0%, #000000 100%);
     }
 
-    .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; }
+    .neon-shape {
+        position: absolute;
+        border: 2px solid var(--neon-blue);
+        filter: blur(1px) drop-shadow(0 0 10px var(--neon-blue));
+        opacity: 0.1;
+        animation: float 20s infinite linear;
+    }
+
+    .shape1 { width: 100px; height: 100px; top: 10%; left: 5%; border-radius: 50%; }
+    .shape2 { width: 150px; height: 150px; bottom: 15%; right: 10%; transform: rotate(45deg); }
+    .shape3 { width: 80px; height: 80px; top: 50%; right: 5%; border-radius: 20%; border-color: var(--neon-purple); filter: drop-shadow(0 0 10px var(--neon-purple)); }
+
+    @keyframes float {
+        0% { transform: translateY(0) rotate(0deg); }
+        50% { transform: translateY(-30px) rotate(180deg); }
+        100% { transform: translateY(0) rotate(360deg); }
+    }
+
+    .container { max-width: 1200px; margin: 0 auto; padding: 0 15px; position: relative; }
 
     section { padding: 40px 0; }
 
@@ -76,22 +80,15 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
     .banner {
         width: 100%;
         max-width: 1200px;
-        margin: 20px auto 20px auto; /* 20px de espacio hacia el reproductor */
-        position: relative;
+        margin: 20px auto 20px auto;
         border-radius: 4px;
         overflow: hidden;
         border: 2px solid var(--neon-blue);
         box-shadow: 0 0 15px var(--neon-blue);
-        background: #000;
         line-height: 0;
     }
 
-    .banner img {
-        width: 100%;
-        height: auto;
-        display: block;
-        object-fit: cover;
-    }
+    .banner img { width: 100%; height: auto; display: block; }
 
     .section-title {
         text-align: center;
@@ -100,7 +97,7 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
         font-weight: 800;
         text-transform: uppercase;
         color: #fff;
-        text-shadow: 0 0 10px var(--neon-purple);
+        text-shadow: 0 0 15px var(--neon-blue);
     }
 
     .player-container {
@@ -111,44 +108,56 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
         border-radius: 4px;
         border: 2px solid var(--neon-blue);
         overflow: hidden;
-        box-shadow: 0 0 20px rgba(0, 255, 255, 0.2);
+        box-shadow: 0 0 25px rgba(0, 255, 255, 0.3);
     }
 
-    /* --- TABLA LICENCIAS --- */
+    /* --- TABLA LICENCIAS CORREGIDA --- */
     .table-wrapper {
         overflow-x: auto;
         border: 1px solid var(--neon-blue);
-        border-radius: 8px;
+        border-radius: 12px;
+        box-shadow: 0 0 35px rgba(0, 255, 255, 0.25); /* Resplandor cian puro */
+        background: rgba(0, 0, 0, 0.85);
     }
 
     .comparison-table {
         width: 100%;
         border-collapse: collapse;
-        background: rgba(10, 10, 10, 0.9);
         min-width: 700px;
     }
 
     .comparison-table th {
-        background-color: var(--neon-purple);
-        color: #fff;
+        background: linear-gradient(90deg, var(--deep-blue), #004466);
+        color: var(--neon-blue);
         padding: 20px;
         text-transform: uppercase;
-        border: 1px solid rgba(255,255,255,0.1);
+        letter-spacing: 2px;
+        text-align: center; /* Encabezados centrados */
+        border-bottom: 2px solid var(--neon-blue);
+        font-weight: 800;
     }
+
+    .comparison-table tr:hover { background: rgba(0, 255, 255, 0.05); }
 
     .comparison-table td {
         padding: 20px;
         text-align: center;
-        border: 1px solid rgba(0, 255, 255, 0.15);
+        border: 1px solid rgba(0, 255, 255, 0.1);
     }
 
     .td-price {
-        font-size: 1.5rem;
+        font-size: 1.6rem;
         font-weight: 800;
         color: var(--neon-blue);
+        text-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
     }
 
-    .td-license { font-weight: 600; color: var(--neon-purple); text-transform: uppercase; }
+    .td-license { 
+        font-weight: 800; 
+        color: #fff; 
+        text-transform: uppercase;
+        text-shadow: 0 0 5px var(--neon-purple);
+    }
 
     .instant-delivery {
         text-align: center;
@@ -157,17 +166,12 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
         text-transform: uppercase;
         letter-spacing: 2px;
         font-size: 0.8rem;
+        font-weight: 600;
     }
 
+    /* --- CONTACT --- */
     .contact-section { text-align: center; padding: 40px 0; }
-
-    .social-icons {
-        display: flex;
-        justify-content: center;
-        gap: 40px;
-        margin-bottom: 35px;
-    }
-
+    .social-icons { display: flex; justify-content: center; gap: 40px; margin-bottom: 35px; }
     .social-icons a { color: #fff; font-size: 2.5rem; transition: 0.3s; }
     .social-icons a:hover { color: var(--neon-blue); transform: translateY(-5px); }
 
@@ -183,18 +187,22 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
         transition: 0.3s;
     }
 
-    .whatsapp-btn:hover { background: var(--neon-blue); color: #000; }
+    .whatsapp-btn:hover { background: var(--neon-blue); color: #000; box-shadow: 0 0 25px var(--neon-blue); }
 
+    /* --- FOOTER --- */
     footer {
-        padding: 40px 0;
+        padding: 60px 0;
         text-align: center;
         border-top: 1px solid rgba(0,255,255,0.1);
         font-size: 0.85rem;
         color: #888;
     }
 
-    .footer-links a { color: #666; text-decoration: none; margin: 0 10px; }
-    .footer-links a:hover { color: var(--neon-purple); }
+    footer p a { color: inherit; text-decoration: none; transition: 0.3s; }
+    footer p a:hover { color: var(--neon-blue); text-shadow: 0 0 8px var(--neon-blue); }
+
+    .footer-links a { color: #666; text-decoration: none; margin: 0 10px; transition: 0.3s; }
+    .footer-links a:hover { color: var(--neon-blue); }
 
     @media (max-width: 600px) {
         .player-container, .player-container iframe { height: 600px; }
@@ -202,7 +210,11 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
 </style>
 </head>
 <body>
-<div class="bg-wrapper"></div>
+<div class="bg-wrapper">
+    <div class="neon-shape shape1"></div>
+    <div class="neon-shape shape2"></div>
+    <div class="neon-shape shape3"></div>
+</div>
 
 <div class="container">
     
@@ -278,7 +290,7 @@ src="https://www.facebook.com/tr?id=1408373406987633&ev=PageView&noscript=1"
     </section>
 
     <footer>
-        <p>© 2026 Yombol Music. All Rights Reserved.</p>
+        <p>© 2026 <a href="https://yombolmusic.com/en/index.html">Yombol Music</a>. All Rights Reserved.</p>
         <div class="footer-links">
             <a href="https://yombolmusic.com/en/privacy-policy.html">Privacy Policy</a> • 
             <a href="https://yombolmusic.com/en/cookies.html">Cookies Policy</a> • 
